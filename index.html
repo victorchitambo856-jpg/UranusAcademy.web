@@ -200,5 +200,19 @@ nav a:hover {
     <p>© 2026 Uranusfrench Academy - All rights reserved</p>
 </footer>
 
+<script>
+const elements = document.querySelectorAll('.card, section h2');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
